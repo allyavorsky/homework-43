@@ -1,4 +1,5 @@
 import UserProfile from "./components/UserProfile";
+import { UserContext } from "./context/UserContext.jsx";
 
 function App() {
   const userData = {
@@ -7,11 +8,14 @@ function App() {
   };
 
   return (
-    <div style={{ border: "1px solid blue", padding: "16px" }}>
-      <h1>Component App (Рівень 1)</h1>
-      <p>Компонент має дані про користувача і передає їх до UserProfile.</p>
-      <UserProfile user={userData} />
-    </div>
+    <UserContext.Provider value={userData}>
+      <div style={{ border: "1px solid blue", padding: "16px" }}>
+        <h1>Component App (Рівень 1)</h1>
+        <p>Компонент роздає данні всім через Context.Provider.</p>
+
+        <UserProfile />
+      </div>
+    </UserContext.Provider>
   );
 }
 
