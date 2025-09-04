@@ -1,12 +1,14 @@
-# React + Vite
+# Homework 43 | Використання React Context у багаторівневій архітектурі компонентів
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проєкт є демонстрацією використання **React Context** для керування глобальним станом у додатку.
 
-Currently, two official plugins are available:
+- **App.jsx**: Головний компонент, який надає дані через `UserContext.Provider`.
+- **UserProfile.jsx**: Проміжний компонент, який не отримує props напряму.
+- **UserDetails.jsx**: Вкладений компонент, який отримує дані за допомогою хука `useContext`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Як запустити локально
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Клонуйте репозиторій: `git clone <URL_вашого_репозиторію>.git`
+2. Перейдіть у папку проєкту: `cd <назва_папки>`
+3. Встановіть залежності: `npm install`
+4. Запустіть проєкт: `npm run dev`
